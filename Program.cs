@@ -10,7 +10,7 @@ namespace InquireFormat
         public static class GlobalVariables
         {
             // 定义StringBuilder全局变量
-            public static StringBuilder stringBuilder = new StringBuilder();
+            public static StringBuilder stringBuilder;
         }
 
         static void Main(string[] args)
@@ -19,8 +19,12 @@ namespace InquireFormat
             Console.WriteLine();
             if (args.Length > 0)
             {
-                Console.WriteLine("{0}\t\t{1}", "图形格式", "文件名"); // 输出列标题
-                Console.WriteLine("\t\t\t\t");
+                // 输出列标题和空行
+                Console.WriteLine("{0}\t\t{1}", "图形格式", "文件名");
+                Console.WriteLine();
+
+                // StringBuilder初始化
+                GlobalVariables.stringBuilder = new StringBuilder();
 
                 // 遍历拖拽的文件/文件夹
                 foreach (string arg in args)
