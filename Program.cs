@@ -91,7 +91,7 @@ namespace InquireFormat
                 switch (GlobalVariables.stringBuilder?.ToString())
                 {
                     case "AC1014":
-                        format = "AutoCAD R14\t";
+                        format = "AutoCAD R14 ";
                         break;
                     case "AC1015":
                         format = "AutoCAD 2000";
